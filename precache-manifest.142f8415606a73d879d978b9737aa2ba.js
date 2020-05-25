@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b26c1c043e95e02934667d280fcf413",
+    "revision": "bbdb806b6b3ca75c62394c173b5ee950",
     "url": "/redux-todo-mvc/index.html"
   },
   {
