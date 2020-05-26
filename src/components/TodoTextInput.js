@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classnames from "classnames";
 
-const TodoTextInput = ({ newTodo, onSave, placeholder, editing }) => {
-  const [todoText, setTodoText] = useState("");
+const TodoTextInput = ({ newTodo, onSave, placeholder, editing, text }) => {
+  const [todoText, setTodoText] = useState(text);
 
   const handleChange = (e) => {
     setTodoText(e.target.value);

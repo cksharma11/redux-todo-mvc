@@ -9,3 +9,5 @@ export const setVisibilityFilter = (filter) => ({
 });
 export const clearCompleted = () => ({ type: types.CLEAR_COMPLETED });
 export const deleteTodo = (id) => ({ type: types.DELETE_TODO, id });
+export const editTodo = (id, text) => ({ type: types.EDIT_TODO, id, text });
+
