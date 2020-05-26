@@ -7,16 +7,12 @@ import {
 
 const getTodos = (state) => state.todos;
 const getVisibilityFilter = (state) => {
-  console.log(state);
-  
   return state.visibilityFilter
 };
 
 export const getVisibleTodos = createSelector(
   [getVisibilityFilter, getTodos],
   (visibilityFilter, todos) => {
-    console.log(visibilityFilter);
-    
     switch (visibilityFilter) {
       case SHOW_ALL:
         return todos;
