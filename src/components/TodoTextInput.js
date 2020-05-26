@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import classnames from "classnames";
 
-const TodoTextInput = ({ newTodo, onSave, placeholder }) => {
+const TodoTextInput = ({ newTodo, onSave, placeholder, editing }) => {
   const [todoText, setTodoText] = useState("");
 
   const handleChange = (e) => {
     setTodoText(e.target.value);
   };
 
-  const handleBlur = (e) => {
-    if (newTodo) {
+  const handleBlur = e => {
+    if (!newTodo) {
       onSave(e.target.value);
     }
   };
+
 
   const handleSubmit = (e) => {
     const text = e.target.value.trim();
@@ -25,7 +26,7 @@ const TodoTextInput = ({ newTodo, onSave, placeholder }) => {
   return (
     <input
       className={classnames({
-        edit: true,
+        edit: editing,
         "new-todo": newTodo,
       })}
       type="text"
